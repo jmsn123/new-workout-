@@ -1,8 +1,8 @@
 const express = require("express");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
-const routes = require("./routes");
-const api = require("./routes/api")
+const routes = require("../fitness/routes");
+const api = require("../fitness/routes/api")
 const app = express();
 const PORT = process.env.PORT || 8080;
 
