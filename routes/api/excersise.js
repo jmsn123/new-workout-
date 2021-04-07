@@ -6,6 +6,13 @@ router.get("/", async(req, res) => {
     console.log("GET /api/Workouts");
     workout.Workout.find()
         .then(data => {
+            data.forEach(item => {
+                let sum = 0;
+                item.forEach(dur => {
+                    sum += dur.duration
+                })
+                item.duration = sum;
+            })
             res.json(data)
         }).catch(err => {
 
